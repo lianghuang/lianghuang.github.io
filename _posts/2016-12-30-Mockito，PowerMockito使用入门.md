@@ -6,6 +6,7 @@ tags:
     - java
     - mockito
     - powermockito
+    - Work
 author: "huangliangliang"
 ---
 
@@ -59,6 +60,7 @@ Mockito maven依赖：http://mvnrepository.com/artifact/org.mockito/mockito-all
     <scope>test</scope>
 </dependency>
 ```
+
 PowerMockito maven依赖：
 
 
@@ -90,32 +92,8 @@ mockito框架创建mock对象不能对final,static,Anonymous,primitive类进行m
 PowerMockito框架可以对final static方法进行mock。
 
 贴一段写的针对于模拟支付链接生成的代码作为案例讲述。
+
 ```
-
-package com.chinamobile.bcop.test;
-
-import static org.mockito.Mockito.when;
-
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
-import org.powermock.api.mockito.PowerMockito;
-import org.powermock.core.classloader.annotations.PrepareForTest;
-import org.powermock.modules.junit4.PowerMockRunner;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.chinamobile.bcop.constants.ProductConstants;
-import com.chinamobile.bcop.order.rest.service.JournalAccountService;
-import com.chinamobile.bcop.order.rest.service.boss.BossService;
-import com.chinamobile.bcop.order.utils.Utils;
-import com.chinamobile.bcop.si.common.config.OPOrderManageConfig;
-import com.chinamobile.bcop.si.common.config.OPOuterApiConfig;
-import com.chinamobile.bcop.si.common.rest.client.UserManageService;
-import com.chinamobile.bcop.user.usermgt.Customer;
 
 /**
  * @author Huang, Liangliang
