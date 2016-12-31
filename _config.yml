@@ -3,9 +3,9 @@ title: Huangliang Blog
 SEOTitle: 黄亮亮的博客 | Huangliang Blog
 header-img: img/home-bg.jpg
 email: njuhll08@gmail.com
-description: "随便写写"
-keyword: ""
-url: "https://lianghuang.github.io/"              # your host, for absolute URL
+description: "黄亮亮的博客"
+keyword: "黄亮亮的博客,黄亮亮"
+url: "https://lianghuang.me/"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 
@@ -14,7 +14,7 @@ baseurl: ""                             # for example, '/blog' if your blog host
 RSS: false
 #weibo_username:     huxpro
 #zhihu_username:     huxpro
-#github_username:    huxpro
+github_username:    lianghuang
 #twitter_username:  huxpro
 #facebook_username:  huxpro
 # linkedin_username:  firstname-lastname-idxxxx
