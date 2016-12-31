@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "问题定位-mysql在虚拟机重启后，通过service mysqld 启动失败"
-date: 2016-12-28 17:42:32+00:00
+date: 2016-09-02
 tags:
     - mysql
     - 问题定位
