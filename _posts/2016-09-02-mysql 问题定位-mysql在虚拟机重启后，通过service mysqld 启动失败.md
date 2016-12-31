@@ -20,6 +20,7 @@ mysql -utest -p -Dcloudmaster < 123335.sql
 mysql 默认配置文件路径：/etc/my.cnf
 
 样例：
+
 ```
 [mysqld]
 datadir=/var/lib/mysql
@@ -48,6 +49,7 @@ pid-file=/var/run/mysqld/mysqld.pid
 
 1. 通过mysqld_safe命令启动mysql，显示启动失败
 2. 查看日志文件 /var/log/mysqld.log
+
 ```
 160413 21:36:27 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
 160413 21:36:27  InnoDB: Initializing buffer pool, size = 8.0M
@@ -61,15 +63,18 @@ pid-file=/var/run/mysqld/mysqld.pid
 显示无法创建文件mysqld.pid权限
 
 3. 看日志是说，在/var/run/目录下未找到mysqld文件夹，因此首先创建它。同时赋文件夹权限给mysql
+
 ```
 chown mysql:mysql /var/run/mysqld
 ```
+
 4. 之前还遇到过异常启动mysql后，步骤一描述的mysql.sock被锁定，无法被重启后的mysql进行获取的情况。
 所以如果报sock问题，可以把mysql.sock删除掉。让新进程重新创建。
 
 
 附：
 stackoverflow推荐的解决mysql问题流程：
+
 ```
 Check the permission of mysql data dir using below command
 # ls -ld /var/lib/mysql/
